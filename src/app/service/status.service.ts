@@ -21,7 +21,11 @@ export class StatusService {
       "rst_id": rst_id,
       "fecha_inicio": desdeFormateada,
       "fecha_fin": hastaFormateada
-    }
-    return this.http.post<any>(this.apiUrl + 'routes/getByIdRestaurantAndDate', JSON.stringify(data)).toPromise();
+    };
+  
+    const headers = { 'Content-Type': 'application/json' };
+  
+    return this.http.post<any>(this.apiUrl + 'routes/getByIdRestaurantAndDate',JSON.stringify(data),{ headers }).toPromise();
   }
+  
 }

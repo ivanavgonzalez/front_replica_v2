@@ -84,13 +84,13 @@ export class AppComponent {
 
   show_modal(local: any, content: any) {
     this.local_Selected = local;
-    /*
+    
     this.StatusService.getTramasLocal(this.local_Selected.rst_id, this.inicio, this.fin).then( r => {
-      this.tramas = r.tramas;
+      this.tramas = r.data.tramas;
       this.modalService.open(content, { centered: true, fullscreen: true, backdrop: 'static', keyboard: false }).result.then(( response => {
       }), ( r => {}));
     }).catch( e => console.log(e) );
-    */
+    
   }
 
   ngOnInit(): void {
